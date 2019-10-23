@@ -12,7 +12,10 @@ ENV WINDOW_MANAGER="openbox"
 
 # Install novnc
 RUN git clone https://github.com/novnc/noVNC.git /opt/novnc \
-    && git clone https://github.com/novnc/websockify /opt/novnc/utils/websockify
+    && git clone https://github.com/novnc/websockify /opt/novnc/utils/websockify \
+    && pwd \
+    && ls \
+    && cd
 COPY novnc-index.html /opt/novnc/index.html
 
 # Add VNC startup script
