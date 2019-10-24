@@ -304,7 +304,8 @@ RUN rosdep init \
 ENV ROS_DISTRO melodic
 RUN apt-get update && apt-get install -y \
     ros-melodic-ros-core=1.4.1-0* \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    cd
 
 # setup entrypoint
 COPY ./ros_entrypoint.sh /
